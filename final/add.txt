@@ -1,0 +1,38 @@
+remove specified objects
+give color
+box1 box2
+
+length or size
+
+one box on the table near the lady(lady on the table)
+
+
+convert 10,11,12.... as a multiple of numbers less than or equal to 9
+
+
+get coordinate of parent object to place child on the near parent object of another
+
+
+enter key will create scene
+
+
+
+box color is red
+lady is sitting on a black chair
+green lady is on red table
+
+
+he she it refers to the immediate child generated.
+
+
+lady and box on the tablemake .Both lady and box child.
+
+
+
+save will create sentencen.txt by opening sentence .txt
+
+give height of chair explicitly 
+
+
+
+rotate cube onboarding
