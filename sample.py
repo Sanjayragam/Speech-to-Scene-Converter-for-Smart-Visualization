@@ -58,8 +58,12 @@ for i in range(0,count,1):
     # print( [str(item) for item in tagged])
 
     for word,pos in nltk.pos_tag(text):
-        if (pos== 'NN' or pos=='IN' or  pos=='VBG' or  pos=='JJ'): #JJ VBD NNP
+        if (pos== 'NN' or  pos=='VBG' or  pos=='JJ' or word=="on" or word=="near" or word=="above" or word=="and" or word=="left" or word=="right" or word=="infront" or word=="back" or word=="front" or word=="behind" ): #JJ VBD NNP  pos=='IN'
+
+            # if(word!="is" or word!="of" or word!="the"):
             relatn.append(word) 
+            
+            
 
         elif (pos=='CD'):
             objectcount=str(number[word])

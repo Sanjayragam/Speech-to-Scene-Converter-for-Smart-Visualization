@@ -35,15 +35,7 @@ public class Inputscript : MonoBehaviour {
 
 		myProcess.Start();
 
-		// Read the standard output of the app we called. 
-		// in order to avoid deadlock we will read output first and then wait for process terminate:
-		// StreamReader myStreamReader = myProcess.StandardOutput;
-		// myString = myStreamReader.ReadToEnd();
 
-		/*if you need to read multiple lines, you might use:
-                string myString = myStreamReader.ReadToEnd() */          
-
-		// wait exit signal from the app we called and then close it.
 		myProcess.WaitForExit();
 		myProcess.Close();
 	

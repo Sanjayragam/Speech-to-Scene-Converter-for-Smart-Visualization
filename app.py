@@ -17,10 +17,10 @@ try:
     
     # print ('Recognizing.....')
 
-    # result="there is a penta on the box"
+    # result="there is two box on the table"
     # result="there is a table near the box"
     # result="yellow is the color of the box"   
-    result="there is penta on the table"
+    result="box is left of the car "
     # result="there is two box on table"
     # result="there is a red table"
     # result="there is a box near table"
@@ -79,8 +79,8 @@ try:
 
 
     for word,pos in nltk.pos_tag(text):
-        if (pos== 'NN' or pos=='IN' or  pos=='VBG' or  pos=='JJ'): #JJ VBD NNP
-            relatn.append(word) 
+        if (pos== 'NN' or  pos=='VBG' or  pos=='JJ' or word=="on" or word=="near" or word=="above" or word=="and" or word=="left" or word=="right" or word=="infront" or word=="back" or word=="front" or word=="behind" ): #JJ VBD NNP pos=='IN'
+            relatn.append(word)  
             
         elif (pos=='CD'):
             objectcount=number[word]

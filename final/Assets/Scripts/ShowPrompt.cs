@@ -14,20 +14,11 @@ public class ShowPrompt : MonoBehaviour
   
     public void StoreName()
     {
-      // theName = inputField.GetComponent<Text>().text;
-
-      // using (StreamWriter writer = new StreamWriter(@"C:\Main Project\main\final\name.txt"))
-      // {
-      //     writer.WriteLine(theName);
-      // }
-      // Debug.Log("hoi");
-
+  
       string filetext = @"C:\Main Project\main\final\sentence.txt";
       string[] lines = File.ReadAllLines(filetext);
 		  field.text =lines[0];
       Debug.Log(lines[0]);
-      //var scenename = "scene 1";
-      //SceneManager.LoadScene(scenename);
-
+   
     }
 }

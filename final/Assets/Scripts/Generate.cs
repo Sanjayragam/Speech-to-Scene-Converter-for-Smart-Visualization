@@ -45,9 +45,7 @@ public class Generate: MonoBehaviour {
 
           string[] items = item.Split('.');
           int x = Int32.Parse(items[0]);
-          // Debug.Log(x);
-          
-          //GENERATE SPACE
+   
           string a = items[1] + (1).ToString();
           Vector2 pos;
           for (int i = 0; i < x; i++) {
@@ -59,11 +57,9 @@ public class Generate: MonoBehaviour {
               instance = Instantiate(Resources.Load(items[1], typeof (GameObject))) as GameObject;
               instance.transform.GetChild(0).name = name;
 
-              // Debug.Log(name);
               float height = GameObject.Find(name).GetComponent < Renderer > ().bounds.size.y;
               float width = GameObject.Find(name).GetComponent < Renderer > ().bounds.size.x;
               pos = ts.getpoint(i + 1, width + width / 5);
-              // Debug.Log(pos);
               GameObject.Find(name).transform.position = new Vector3(pos.x, height / 2, pos.y);
 
             } else {
@@ -71,11 +67,9 @@ public class Generate: MonoBehaviour {
             }
 
           }
-          //GENERATE SPACE
 
         } catch (System.Exception) {
 
-			    // Debug.Log("hai");
 		    }
 
 
@@ -84,29 +78,7 @@ public class Generate: MonoBehaviour {
     
     }
 
-    // string fileName = @"C:/Main Project/main/final/promptformatted.txt";
-    // string text = File.ReadAllText(fileName);
-    // var count=-1;
-    // string[] lines = text.Split(Environment.NewLine);
-    // foreach (string line in lines) {
-    //     count=count+1;
-    //     // Debug.Log(line);
-    // }
-    
-    // string[] pipe = new string[count];
-    
-    // for (int i = 0; i <count; i++) 
-		// {
-  	// 	pipe[i]=lines[i];
-		// }
 
-    // foreach (string part in pipe) {
-    //   Debug.Log(part);	
-    // }
-			
-
-
-   
     
   }
 }

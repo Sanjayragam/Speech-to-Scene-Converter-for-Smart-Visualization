@@ -52,7 +52,7 @@ public class One : MonoBehaviour {
 	public void undo()
 	{
 	
-		string g = "Draw ";
+		string g = "Draw Blackink Yellowink Redink";
 		string[] lists = g.Split (' ');
 		string tar;
 	
