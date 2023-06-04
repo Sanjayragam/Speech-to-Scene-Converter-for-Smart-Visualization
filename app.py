@@ -9,10 +9,10 @@ import sys
 
 
 stop_words = set(stopwords.words('english'))
-# r = sr.Recognizer()
-# with sr.Microphone() as source:
-# 	print ('Say somethin dude!!!')
-# 	audio = r.listen(source)
+r = sr.Recognizer()
+with sr.Microphone() as source:
+	print ('Say somethin dude!!!')
+	audio = r.listen(source)
 try:
     
     # print ('Recognizing.....')
@@ -20,13 +20,13 @@ try:
     # result="there is two box on the table"
     # result="there is a table near the box"
     # result="yellow is the color of the box"   
-    result="box is left of the car "
+    # result="box is left of the car "
     # result="there is two box on table"
     # result="there is a red table"
     # result="there is a box near table"
     # result="color of the box is yellow"
 
-    # result =r.recognize_google(audio)
+    result =r.recognize_google(audio)
     
     print(result)
     

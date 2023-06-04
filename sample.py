@@ -85,8 +85,14 @@ for i in range(0,count,1):
         if relation_input[i].isdigit() and relation_input[i+1].isalpha():
             relation_input[i]=relation_input[i]+"."+relation_input[i+1]
             relation_input[i+1]='delete'
+
+        # elif relation_input[i]=="on" and relation_input[i+1]=="left" or relation_input[i+1]=="right":
+        #     relation_input[i]=relation_input[i+1]
+        #     relation_input[i+1]='delete'
+
         else:
             relation_input[i]="1"+"."+relation_input[i]
+
     relation_input = [ele for ele in relation_input if ele != '1.delete']
 
     print(relation_input)

@@ -99,7 +99,7 @@ public void color()
 		var measure=parts[count-1];
 		string[] measurevalue = measure.Split(".");
 		string[] object_name = object_to_scale.Split(".");
-		Debug.Log(measurevalue[1]);
+		// Debug.Log(measurevalue[1]);
 		
 			//convert to table1 concatenate 1
 
@@ -115,7 +115,7 @@ public void color()
 			oname = object_name[1]+'1';
 		}
 
-		Debug.Log(oname);
+		// Debug.Log(oname);
 
 		
 
@@ -135,6 +135,7 @@ public void color()
             GameObject.Find(oname).transform.position = new Vector3(0,height/2,0);
 		}
 
+	
 
 		// if(parts[0]=="width" && measurevalue[1]=="meter")
 		// {	
@@ -215,11 +216,11 @@ public void relate()
 					// Debug.Log(pname);
 
 
-					Debug.Log(right[1]);
+					// Debug.Log(right[1]);
 
 					char lastChar = right[1][right[1].Length - 1];
 
-					Debug.Log(lastChar);
+					// Debug.Log(lastChar);
 
 
 					if(Char.IsDigit(lastChar))
@@ -237,12 +238,29 @@ public void relate()
 					for(int i=0;i<x;i++)
 					{
 					// Debug.Log(pname);
+
+					
+
+
+
 					string cname=left[1]+(i+1).ToString();
 					parent= GameObject.Find (pname);
 					child=GameObject.Find (cname);
 					
-					pheight = parent.GetComponent<Renderer> ().bounds.size.y;
+					// pheight = parent.GetComponent<Renderer> ().bounds.size.y;
+					// Debug.Log(pheight);
+
+					if(pname=="chair1")
+					{
+						pheight=0.45F;
+					}
+					else
+					{
+						pheight = parent.GetComponent<Renderer> ().bounds.size.y;
+					}
+					
 					Debug.Log(pheight);
+
 					cheight = child.GetComponent<Renderer> ().bounds.size.y;
 
 					Transform parentTransform = parent.transform;
@@ -250,7 +268,7 @@ public void relate()
 					child.transform.position+= new Vector3 (parentposition[0],pheight,0);
 
 					
-					Debug.Log(parentposition[1]);
+					// Debug.Log(parentposition[1]);
 
 					childs.Add(child);
 
@@ -280,7 +298,7 @@ public void relate()
 					pwidth = parent.GetComponent<Renderer> ().bounds.size.z;
 					cwidth = child.GetComponent<Renderer> ().bounds.size.z;
 
-					var position=((pwidth/2)+(cwidth/2))*1;
+					var position=((pwidth)+(cwidth))*1;
 					// Debug.Log(position);
 					child.transform.position+= new Vector3 (position,0,0);
 					// child.transform.position+= new Vector3 (0,0,5);

@@ -37,7 +37,7 @@ public class One : MonoBehaviour {
 	public void clear()
 	{
 		
-		string g = "Draw mammoth bird penta table box chair car lady tree house box2";
+		string g = "Draw mammoth bird penta table box chair chair2 chair3 chair4 chair1 chair5 car lady tree house box2";
 		string[] lists = g.Split (' ');
 		string tar;
 	
