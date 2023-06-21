@@ -17,8 +17,9 @@ public class One : MonoBehaviour {
 	{
 		
 		gr.gen ();
-		rl.color();
 		rl.relate();
+		rl.color();
+		rl.dimension();
 
 	}
 
@@ -37,7 +38,7 @@ public class One : MonoBehaviour {
 	public void clear()
 	{
 		
-		string g = "Draw mammoth bird penta table box chair chair2 chair3 chair4 chair1 chair5 car lady tree house box2";
+		string g = "Draw mammoth bird penta table box chair chair2 chair3 chair4 chair1 chair5 car lady tree house box2 skeleton heart Draw Blackink Yellowink Redink human";
 		string[] lists = g.Split (' ');
 		string tar;
 	
